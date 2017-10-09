@@ -9,7 +9,7 @@
             <br />
             <h2>Your balance: $${UserCashAccount.cashBalance}</h2>
             <h5>Please make your choice</h5>
-            <form action = "SendEventByHttpPost" method = "POST" onSubmit="alert('Send');">
+            <form action = "homeProcess" method = "POST" onSubmit="alert('Send');">
                 <br />
                 Operation Type:
                 <select class="form-control" name="type">
