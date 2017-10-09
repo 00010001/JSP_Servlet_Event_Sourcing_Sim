@@ -20,8 +20,13 @@ public class QueueAddServer extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String url = req.getParameter("serverURL");
+        if(url.length() == 0){
+            System.out.println("invalid url, cant add");
+        } else {
+            System.out.println("added: " + url);
+            QueueServer.addServerURL(url);
+        }
 
-        QueueServer.addServerURL(url);
 
         resp.sendRedirect("/queue");
     }

@@ -13,6 +13,7 @@ import java.io.IOException;
 public class FinalServerSaveEventsToFile extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         FinalServerUtil.saveEventsToFile();
         resp.sendRedirect("/server");
     }

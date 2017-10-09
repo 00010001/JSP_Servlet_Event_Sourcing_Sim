@@ -15,7 +15,6 @@ public class FinalServerGetEvent extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
         FinalServerUtil.getEventFromQueueServer();
         resp.sendRedirect("/server");
     }

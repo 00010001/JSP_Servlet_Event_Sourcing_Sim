@@ -53,7 +53,7 @@
             <br />
             <h4>Add new Client Server:</h4>
 
-            <form action = "queueAddServerURL" method = "POST" onSubmit="alert('added');">
+            <form action = "queueAddServerURL" method = "POST">
                 <div class="form-group">
                     <label for="serverURL">Server URL</label>
                     <input type="text" class="form-control" id="serverURL" name="serverURL" placeholder="Enter URL">
