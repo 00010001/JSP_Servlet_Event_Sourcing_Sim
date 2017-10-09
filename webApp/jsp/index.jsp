@@ -1,10 +1,14 @@
+<%@ page import="model.UserCashAccount" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@ include file="header.htm" %>
 
     <div class="row">
         <div class="col">
             <br />
-            <h2>Please make your choice:</h2>
+            <h2>Your balance: $${UserCashAccount.cashBalance}</h2>
+            <h5>Please make your choice</h5>
             <form action = "SendEventByHttpPost" method = "POST" onSubmit="alert('Send');">
                 <br />
                 Operation Type:
