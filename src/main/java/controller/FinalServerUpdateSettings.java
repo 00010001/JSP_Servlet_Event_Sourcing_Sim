@@ -1,6 +1,6 @@
 package controller;
 
-import service.FinalServerUtil;
+import config.ServerConfig;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,14 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/serverGet")
-public class FinalServerGetEvent extends HttpServlet {
+@WebServlet("/serverUpdateSettings")
+public class FinalServerUpdateSettings extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-        FinalServerUtil.getEventFromQueueServer();
+        String onNotify = req.getParameter("onNotify");
+        ServerConfig.onNotifyFetchAllEvents = !onNotify.equals("single");
         resp.sendRedirect("/server");
     }
 }

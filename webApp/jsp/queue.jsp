@@ -26,7 +26,7 @@
             <br />
             <h2>Operations:</h2>
 
-            <form action = "serverGet" method = "POST" onSubmit="alert('Send');">
+            <form action = "queueNotifyAll" method = "GET" onSubmit="alert('Send');">
                 <input class="btn btn-info" type = "submit" value = "Notify All" />
             </form>
 
@@ -36,11 +36,11 @@
             <h4>Current Client Server List:</h4>
             <div class="list-group">
 
-                <a href="${URLConfig.LOCALHOST}/server" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">${URLConfig.LOCALHOST}/server</h5>
-                    </div>
-                </a>
+                <%--<a href="${URLConfig.LOCALHOST}/server" class="list-group-item list-group-item-action flex-column align-items-start">--%>
+                    <%--<div class="d-flex w-100 justify-content-between">--%>
+                        <%--<h5 class="mb-1">${URLConfig.LOCALHOST}/server</h5>--%>
+                    <%--</div>--%>
+                <%--</a>--%>
                 <c:forEach items="${serverURLs}" var="serverURL">
                     <a href="${serverURL}" class="list-group-item list-group-item-action flex-column align-items-start">
                         <div class="d-flex w-100 justify-content-between">

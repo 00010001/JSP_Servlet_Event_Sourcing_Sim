@@ -1,5 +1,6 @@
 package service;
 
+import config.URLConfig;
 import model.Event;
 import org.json.JSONObject;
 
@@ -9,7 +10,9 @@ import java.util.List;
 
 public class QueueServer {
     private static LinkedList<Event> eventLinkedList = new LinkedList<>();
-    private static List<String> serversURLList = new ArrayList<>();
+    private static List<String> serversURLList = new ArrayList<String>() {{
+        add(URLConfig.LOCALHOST+"/finalServerReceiver");
+    }};
 
     public static LinkedList<Event> getEventLinkedList(){
         return eventLinkedList;
