@@ -1,3 +1,4 @@
+<%@ page import="config.URLConfig" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -34,9 +35,10 @@
             <br />
             <h4>Current Client Server List:</h4>
             <div class="list-group">
-                <a href="http://localhost:8080/server" class="list-group-item list-group-item-action flex-column align-items-start">
+
+                <a href="${URLConfig.LOCALHOST}/server" class="list-group-item list-group-item-action flex-column align-items-start">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">http://localhost:8080/server</h5>
+                        <h5 class="mb-1">${URLConfig.LOCALHOST}/server</h5>
                     </div>
                 </a>
                 <c:forEach items="${serverURLs}" var="serverURL">
